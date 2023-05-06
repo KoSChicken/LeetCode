@@ -10,6 +10,16 @@ public class MaxDepthOfBinaryTree {
     public static void main(String[] args) {
         TreeNode tree = buildTree();
         System.out.println(maxDepth(tree));
+        System.out.println(maxDepthRecur(tree));
+    }
+
+    public static int maxDepthRecur(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftDepth = maxDepthRecur(root.left);
+        int rightDepth = maxDepthRecur(root.right);
+        return Math.max(leftDepth, rightDepth) + 1;
     }
 
     public static int maxDepth(TreeNode root) {

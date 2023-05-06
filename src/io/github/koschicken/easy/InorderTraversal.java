@@ -2,7 +2,11 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.List;
 
 /**
  * 中序遍历二叉树
@@ -30,8 +34,8 @@ public class InorderTraversal {
         printList(preOrderTraversalNoRecursive(t1));
         printList(preOrderTraversal(t1));
         // 中序
-        printList(middleOrderTraversalNoRecursive(t1));
-        printList(middleOrderTraversal(t1));
+        printList(inOrderTraversalNoRecursive(t1));
+        printList(inOrderTraversal(t1));
         // 后序
         printList(postOrderTraversalNoRecursive(t1));
         printList(postOrderTraversal(t1));
@@ -40,7 +44,7 @@ public class InorderTraversal {
     /**
      * 中序
      */
-    private static List<Integer> middleOrderTraversalNoRecursive(TreeNode root) {
+    public static List<Integer> inOrderTraversalNoRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
         while (root != null || !deque.isEmpty()) {
@@ -57,24 +61,24 @@ public class InorderTraversal {
         return list;
     }
 
-    private static List<Integer> middleOrderTraversal(TreeNode root) {
+    private static List<Integer> inOrderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        middleOrderTraversal(root, list);
+        inOrderTraversal(root, list);
         return list;
     }
 
-    private static void middleOrderTraversal(TreeNode treeNode, List<Integer> list) {
+    private static void inOrderTraversal(TreeNode treeNode, List<Integer> list) {
         if (treeNode != null) {
-            middleOrderTraversal(treeNode.left, list);
+            inOrderTraversal(treeNode.left, list);
             list.add(treeNode.val);
-            middleOrderTraversal(treeNode.right, list);
+            inOrderTraversal(treeNode.right, list);
         }
     }
 
     /**
      * 前序
      */
-    private static List<Integer> preOrderTraversalNoRecursive(TreeNode root) {
+    public static List<Integer> preOrderTraversalNoRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
         while (root != null || !deque.isEmpty()) {
@@ -108,7 +112,7 @@ public class InorderTraversal {
     /**
      * 后序
      */
-    private static List<Integer> postOrderTraversalNoRecursive(TreeNode root) {
+    public static List<Integer> postOrderTraversalNoRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
         TreeNode lastVisit = root;
