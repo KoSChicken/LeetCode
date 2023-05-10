@@ -15,7 +15,7 @@ public class SortedArrayToBST {
     public static void main(String[] args) {
         int[] nums = {0, 1, 2, 3, 4, 5};
         TreeNode treeNode = sortedArrayToBST(nums);
-        List<Integer> list = InorderTraversal.postOrderTraversalNoRecursive(treeNode);
+        List<Integer> list = BSTTraversal.postOrderTraversalNoRecursive(treeNode);
         System.out.println(Arrays.toString(list.toArray(new Integer[0])));
     }
 

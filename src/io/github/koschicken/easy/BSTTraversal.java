@@ -9,10 +9,12 @@ import java.util.Deque;
 import java.util.List;
 
 /**
- * 中序遍历二叉树
- * 中序遍历：遍历完左子树后输出节点，然后遍历右子树
+ * 遍历二叉树
+ * 前序遍历：先输出根节点再遍历左子树，然后遍历右子树
+ * 中序遍历：遍历完左子树后输出根节点，然后遍历右子树
+ * 后序遍历：遍历完左子树后遍历右子树，然后输出根节点
  */
-public class InorderTraversal {
+public class BSTTraversal {
 
     public static void main(String[] args) {
         TreeNode t1 = new TreeNode(1);
