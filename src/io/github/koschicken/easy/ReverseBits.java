@@ -3,24 +3,15 @@ package io.github.koschicken.easy;
 public class ReverseBits {
 
     public static void main(String[] args) {
-        System.out.println(reverseBits(43261596));
+        System.out.println(reverseBits(-3));
     }
 
     private static int reverseBits(int n) {
-        String binaryString = Integer.toBinaryString(n);
-        int i = 0;
-        int j = binaryString.length() - 1;
-        char[] arr = new char[]{48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48};
-        while (i < j) {
-            arr[j] = binaryString.charAt(i);
-            arr[i] = binaryString.charAt(j);
-            i++;
-            j--;
+        int rev = 0;
+        for (int i = 0; i < 32 && n != 0; ++i) {
+            rev |= (n & 1) << (31 - i);
+            n >>>= 1;
         }
-        return Integer.parseInt(new String(arr), 2);
-    }
-
-    private static String toBits(int n) {
-        return Integer.toBinaryString(n);
+        return rev;
     }
 }
