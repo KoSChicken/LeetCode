@@ -13,7 +13,7 @@ public class RemoveElements {
         n2.next = n3;
         n3.next = n4;
         ListNode listNode = removeElements(n1, 1);
-        printNode(listNode);
+        ListNode.printNode(listNode);
     }
 
     public static ListNode removeElementsRecur(ListNode head, int val) {
@@ -39,15 +39,5 @@ public class RemoveElements {
             }
         }
         return dummy.next;
-    }
-
-    private static void printNode(ListNode head) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(head.val);
-        while (head.next != null) {
-            sb.append(" ").append(head.next.val);
-            head = head.next;
-        }
-        System.out.println(sb);
     }
 }

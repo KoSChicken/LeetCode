@@ -15,4 +15,17 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public static void printNode(ListNode head) {
+        StringBuilder sb = new StringBuilder();
+        if (head == null) {
+            return;
+        }
+        sb.append(head.val);
+        while (head.next != null) {
+            sb.append(" ").append(head.next.val);
+            head = head.next;
+        }
+        System.out.println(sb);
+    }
 }
