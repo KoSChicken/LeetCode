@@ -5,6 +5,9 @@ import io.github.koschicken.common.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * <a href="https://leetcode.cn/problems/maximum-depth-of-binary-tree">104. 二叉树的最大深度</a>
+ */
 public class MaxDepthOfBinaryTree {
 
     public static void main(String[] args) {

@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * <a href="https://leetcode.cn/problems/contains-duplicate-ii/description/">219. 存在重复元素 II</a>
+ */
 public class ContainsNearbyDuplicate {
     public static void main(String[] args) {
         System.out.println(containsNearbyDuplicate(new int[]{1, 2, 3, 1}, 3));

@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/reverse-linked-list/description/">206. 反转链表</a>
+ */
 public class ReverseList {
 
     public static void main(String[] args) {

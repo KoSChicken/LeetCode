@@ -1,5 +1,9 @@
 package io.github.koschicken.medium;
 
+/**
+ * <a href="https://leetcode.cn/problems/minimum-number-of-frogs-croaking/description/">1419. 数青蛙</a>
+ * TODO not solved
+ */
 public class FrogsCroaking {
 
     private static final char[] PREVIOUS = new char['s'];

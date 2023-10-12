@@ -3,6 +3,8 @@ package io.github.koschicken.easy;
 import java.util.Arrays;
 
 /**
+ * <a href="https://leetcode.cn/problems/plus-one/description/">66. 加一</a>
+ * <br/>
  * 吐槽：中文版的leetcode，有些题干翻译的简直不说人话，比如这一题，只看题干基本不知所云。
  */
 public class PlusOne {

@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/symmetric-tree">101. 对称二叉树</a>
+ */
 public class IsSymmetricTree {
 
     public static void main(String[] args) {

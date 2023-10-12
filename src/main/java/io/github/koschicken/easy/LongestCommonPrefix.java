@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/longest-common-prefix/description/">14. 最长公共前缀</a>
+ */
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {

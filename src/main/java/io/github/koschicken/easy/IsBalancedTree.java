@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/balanced-binary-tree/description/">110. 平衡二叉树</a>
+ */
 public class IsBalancedTree {
 
     public static void main(String[] args) {

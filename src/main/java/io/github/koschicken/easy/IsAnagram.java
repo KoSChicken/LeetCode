@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/valid-anagram/description/">242. 有效的字母异位词</a>
+ */
 public class IsAnagram {
 
     public static void main(String[] args) {

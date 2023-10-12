@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/odd-string-difference/description/">2451. 差值数组不同的字符串</a>
+ */
 public class OddString {
 
     public static void main(String[] args) {

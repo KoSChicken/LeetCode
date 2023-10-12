@@ -1,10 +1,14 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/excel-sheet-column-title/description/">168. Excel表列名称</a>
+ * <a href="https://leetcode.cn/problems/excel-sheet-column-number/description/">171. Excel表列序号</a>
+ */
 public class ExcelColumn {
 
     public static void main(String[] args) {
         System.out.println(convertToTitle(2147483647));
-        System.out.println(convertToNumber("FXSHRXW"));
+        System.out.println(titleToNumber("FXSHRXW"));
     }
 
     private static String convertToTitle(int columnNumber) {
@@ -17,7 +21,7 @@ public class ExcelColumn {
         return sb.reverse().toString();
     }
 
-    private static int convertToNumber(String columnTitle) {
+    private static int titleToNumber(String columnTitle) {
         int column = 0;
         int length = columnTitle.length();
         for (int i = 0; i < length; i++) {

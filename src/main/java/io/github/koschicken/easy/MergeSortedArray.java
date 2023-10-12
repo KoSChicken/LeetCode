@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.cn/problems/merge-sorted-array/description/">88. 合并两个有序数组</a>
+ */
 public class MergeSortedArray {
 
     public static void main(String[] args) {

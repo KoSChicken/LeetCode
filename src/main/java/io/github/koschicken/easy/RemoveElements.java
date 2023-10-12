@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/remove-linked-list-elements/description/">203. 移除链表元素</a>
+ */
 public class RemoveElements {
 
     public static void main(String[] args) {

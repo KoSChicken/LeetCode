@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/same-tree/description/">100. 相同的树</a>
+ */
 public class IsSameTree {
 
     public static void main(String[] args) {

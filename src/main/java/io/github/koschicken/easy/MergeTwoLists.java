@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/merge-two-sorted-lists/description/">21. 合并两个有序链表</a>
+ */
 public class MergeTwoLists {
 
     public static void main(String[] args) {

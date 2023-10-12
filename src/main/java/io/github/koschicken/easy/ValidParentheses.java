@@ -1,10 +1,10 @@
 package io.github.koschicken.easy;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+/**
+ * <a href="https://leetcode.cn/problems/valid-parentheses/description/">20. 有效的括号</a>
+ */
 public class ValidParentheses {
 
     private static final Map<Character, Character> map = new HashMap<>();
@@ -26,7 +26,7 @@ public class ValidParentheses {
         Deque<Character> deque = new ArrayDeque<>();
         deque.push(str.charAt(0));
         for (int i = 1; i < str.length(); i++) {
-            if (!deque.isEmpty() && map.get(str.charAt(i)) == deque.peek()) {
+            if (!deque.isEmpty() && Objects.equals(map.get(str.charAt(i)), deque.peek())) {
                 deque.pop();
             } else {
                 deque.push(str.charAt(i));

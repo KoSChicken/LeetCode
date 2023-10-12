@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/">26. 删除有序数组中的重复项</a>
+ */
 public class RemoveDuplicates {
 
     public static void main(String[] args) {

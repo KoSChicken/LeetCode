@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/majority-element">169. 多数元素</a>
+ */
 public class MajorityElement {
 
     public static void main(String[] args) {

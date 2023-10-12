@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/linked-list-cycle/description/">141. 环形链表</a>
+ */
 public class HasCycle {
 
     public static void main(String[] args) {

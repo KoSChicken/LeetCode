@@ -7,6 +7,9 @@ import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/missing-number/description/">268. 丢失的数字</a>
+ */
 public class MissingNumber {
 
     @Test

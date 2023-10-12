@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.cn/problems/queens-that-can-attack-the-king/description/">1222. 可以攻击国王的皇后</a>
+ */
 public class QueensAttackTheKing {
 
     @Test

@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/pass-the-pillow/description/">2582. 递枕头</a>
+ */
 public class PassThePillow {
 
     @Test

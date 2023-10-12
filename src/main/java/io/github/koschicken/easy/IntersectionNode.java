@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/description/">160. 相交链表</a>
+ */
 public class IntersectionNode {
 
     public static void main(String[] args) {

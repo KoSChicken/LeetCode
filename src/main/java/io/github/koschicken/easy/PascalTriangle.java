@@ -3,6 +3,10 @@ package io.github.koschicken.easy;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.cn/problems/pascals-triangle">118. 杨辉三角</a>
+ * <a href="https://leetcode.cn/problems/pascals-triangle-ii">119. 杨辉三角 II</a>
+ */
 public class PascalTriangle {
 
     public static void main(String[] args) {

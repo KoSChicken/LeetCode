@@ -8,6 +8,9 @@ import java.util.Deque;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * <a href="https://leetcode.cn/problems/palindrome-linked-list/description/">234. 回文链表</a>
+ */
 public class PalindromeLinkedList {
 
     @Test

@@ -3,6 +3,9 @@ package io.github.koschicken.easy;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * <a href="https://leetcode.cn/problems/happy-number">202. 快乐数</a>
+ */
 public class IsHappy {
 
     public static void main(String[] args) {

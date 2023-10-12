@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/movement-of-robots/description/">2731. 移动机器人</a>
+ */
 public class MovementOfRobots {
 
     @Test

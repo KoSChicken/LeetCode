@@ -3,6 +3,9 @@ package io.github.koschicken.easy;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.cn/problems/summary-ranges/description/">228. 汇总区间</a>
+ */
 public class SummaryRanges {
 
     public static void main(String[] args) {

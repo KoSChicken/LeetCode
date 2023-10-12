@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/minimum-depth-of-binary-tree">111. 二叉树的最小深度</a>
+ */
 public class MinDepthOfBinaryTree {
 
     public static void main(String[] args) {

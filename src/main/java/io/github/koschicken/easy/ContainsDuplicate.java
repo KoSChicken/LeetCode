@@ -3,6 +3,9 @@ package io.github.koschicken.easy;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * <a href="https://leetcode.cn/problems/contains-duplicate/description/">217. 存在重复元素</a>
+ */
 public class ContainsDuplicate {
 
     public static void main(String[] args) {

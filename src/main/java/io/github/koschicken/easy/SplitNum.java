@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/split-with-minimum-sum/description/">2578. 最小和分割</a>
+ */
 public class SplitNum {
 
     @Test

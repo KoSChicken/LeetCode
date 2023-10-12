@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/search-insert-position/description/">35. 搜索插入位置</a>
+ */
 public class SearchInsert {
 
     public static void main(String[] args) {

@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/length-of-last-word/description/">58. 最后一个单词的长度</a>
+ */
 public class LengthOfLastWord {
 
     public static void main(String[] args) {

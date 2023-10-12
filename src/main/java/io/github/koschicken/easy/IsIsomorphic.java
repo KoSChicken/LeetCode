@@ -3,6 +3,9 @@ package io.github.koschicken.easy;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.cn/problems/isomorphic-strings">205. 同构字符串</a>
+ */
 public class IsIsomorphic {
 
     public static void main(String[] args) {

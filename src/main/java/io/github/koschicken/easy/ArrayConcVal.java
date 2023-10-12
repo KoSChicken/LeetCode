@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/find-the-array-concatenation-value/description/">2562. 找出数组的串联值</a>
+ */
 public class ArrayConcVal {
 
     @Test

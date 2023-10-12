@@ -4,8 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/WHnhjV/description/">LCP.50 宝石补给</a>
+ */
 public class GiveGem {
-    
+
     @Test
     void solution() {
         // 输入：gem = [3,1,2], operations = [[0,2],[2,1],[2,0]]

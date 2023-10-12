@@ -1,5 +1,8 @@
-package io.github.koschicken.easy;
+package io.github.koschicken.medium;
 
+/**
+ * <a href="https://leetcode.cn/problems/maximum-subarray/description/">53. 最大子数组和</a>
+ */
 public class MaxSubArray {
 
     public static void main(String[] args) {

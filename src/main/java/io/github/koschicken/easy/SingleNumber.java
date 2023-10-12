@@ -1,5 +1,8 @@
 package io.github.koschicken.easy;
 
+/**
+ * <a href="https://leetcode.cn/problems/single-number/description/">136. 只出现一次的数字</a>
+ */
 public class SingleNumber {
 
     public static void main(String[] args) {

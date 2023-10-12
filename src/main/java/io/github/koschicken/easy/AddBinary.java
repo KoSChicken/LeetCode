@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.cn/problems/add-binary/description/">67. 二进制求和</a>
+ */
 public class AddBinary {
 
     public static void main(String[] args) {

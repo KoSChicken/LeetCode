@@ -7,6 +7,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * <a href="https://leetcode.cn/problems/filter-restaurants-by-vegan-friendly-price-and-distance/description/">1333. 餐厅过滤器</a>
+ */
 public class FilterRestaurants {
 
     @Test

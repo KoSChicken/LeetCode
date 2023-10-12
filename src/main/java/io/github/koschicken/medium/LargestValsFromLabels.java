@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.cn/problems/largest-values-from-labels/description/">1090. 受标签影响的最大值</a>
+ */
 public class LargestValsFromLabels {
 
     public static void main(String[] args) {

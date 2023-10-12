@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
 
+/**
+ * <a href="https://leetcode.cn/problems/path-sum/description/">112. 路径总和</a>
+ */
 public class PathSum {
 
     public static void main(String[] args) {

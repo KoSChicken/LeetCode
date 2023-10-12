@@ -2,6 +2,9 @@ package io.github.koschicken.easy;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.cn/problems/remove-element/">27. 移除元素</a>
+ */
 public class RemoveElement {
 
     public static void main(String[] args) {
