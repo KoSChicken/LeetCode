@@ -1,4 +1,4 @@
-package io.github.koschicken.easy;
+package io.github.koschicken.medium;
 
 import org.junit.jupiter.api.Test;
 
