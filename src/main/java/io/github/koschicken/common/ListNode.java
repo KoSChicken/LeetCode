@@ -16,16 +16,27 @@ public class ListNode {
         this.next = next;
     }
 
-    public static void printNode(ListNode head) {
+    public ListNode(int[] array) {
+        if (array == null || array.length == 0) {
+            throw new IllegalArgumentException("array cannot be null or empty");
+        }
+        this.val = array[0];
+        ListNode current = this;
+        for (int i = 1; i < array.length; i++) {
+            current.next = new ListNode(array[i]);
+            current = current.next;
+        }
+    }
+
+    @Override
+    public String toString() {
         StringBuilder sb = new StringBuilder();
-        if (head == null) {
-            return;
+        sb.append(val);
+        ListNode nextNode = this.next;
+        while (nextNode != null) {
+            sb.append(",").append(nextNode.val);
+            nextNode = nextNode.next;
         }
-        sb.append(head.val);
-        while (head.next != null) {
-            sb.append(" ").append(head.next.val);
-            head = head.next;
-        }
-        System.out.println(sb);
+        return sb.toString();
     }
 }

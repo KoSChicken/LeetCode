@@ -1,25 +1,22 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * <a href="https://leetcode.cn/problems/remove-linked-list-elements/description/">203. 移除链表元素</a>
  */
 public class RemoveElements {
 
-    public static void main(String[] args) {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(1);
-        ListNode n4 = new ListNode(1);
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        ListNode listNode = removeElements(n1, 1);
-        ListNode.printNode(listNode);
+    @Test
+    void solution() {
+        assertEquals(removeElementsRecur(new ListNode(new int[]{1, 2, 1, 1}), 1).toString(), "2");
+        assertEquals(removeElements(new ListNode(new int[]{1, 2, 1, 1}), 1).toString(), "2");
     }
 
-    public static ListNode removeElementsRecur(ListNode head, int val) {
+    public ListNode removeElementsRecur(ListNode head, int val) {
         if (head == null) {
             return null;
         }
@@ -27,7 +24,7 @@ public class RemoveElements {
         return head.val == val ? head.next : head;
     }
 
-    public static ListNode removeElements(ListNode head, int val) {
+    public ListNode removeElements(ListNode head, int val) {
         if (head == null) {
             return null;
         }

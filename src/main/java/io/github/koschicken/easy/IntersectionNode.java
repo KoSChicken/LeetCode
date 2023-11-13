@@ -1,38 +1,42 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * <a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/description/">160. 相交链表</a>
  */
 public class IntersectionNode {
 
-    public static void main(String[] args) {
+    @Test
+    void solution() {
         ListNode headA = new ListNode(4);
-        ListNode node1 = new ListNode(1);
-
-        ListNode node2 = new ListNode(8);
-        ListNode node3 = new ListNode(4);
-        ListNode node4 = new ListNode(5);
+        ListNode a1 = new ListNode(1);
 
         ListNode headB = new ListNode(5);
-        ListNode node5 = new ListNode(6);
-        ListNode node6 = new ListNode(1);
+        ListNode b1 = new ListNode(6);
+        ListNode b2 = new ListNode(1);
 
-        headA.next = node1;
-        node1.next = node2;
+        ListNode ab1 = new ListNode(8);
+        ListNode ab2 = new ListNode(4);
+        ListNode ab3 = new ListNode(5);
 
-        headB.next = node5;
-        node5.next = node6;
-        node6.next = node2;
+        headA.next = a1;
+        a1.next = ab1;
 
-        node2.next = node3;
-        node3.next = node4;
+        headB.next = b1;
+        b1.next = b2;
+        b2.next = ab1;
 
-        System.out.println(getIntersectionNode(headA, headB));
+        ab1.next = ab2;
+        ab2.next = ab3;
+
+        assertEquals(getIntersectionNode(headA, headB).toString(), "8,4,5");
     }
 
-    private static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    private ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode itA = headA;
         ListNode itB = headB;
         while (itA != itB) {

@@ -15,15 +15,7 @@ public class PalindromeLinkedList {
 
     @Test
     void test() {
-        ListNode head = new ListNode(1);
-        ListNode node1 = new ListNode(1);
-        head.next = node1;
-        ListNode node2 = new ListNode(2);
-        node1.next = node2;
-        ListNode node3 = new ListNode(1);
-        node2.next = node3;
-        node3.next = new ListNode(1);
-        assertTrue(isPalindrome(head));
+        assertTrue(isPalindrome(new ListNode(new int[]{1, 1, 2, 1, 1})));
     }
 
     private boolean isPalindrome(ListNode head) {

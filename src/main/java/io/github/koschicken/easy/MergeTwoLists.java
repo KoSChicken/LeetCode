@@ -1,44 +1,23 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * <a href="https://leetcode.cn/problems/merge-two-sorted-lists/description/">21. 合并两个有序链表</a>
  */
 public class MergeTwoLists {
 
-    public static void main(String[] args) {
-        ListNode l1 = new ListNode(1);
-        ListNode l2 = new ListNode(2);
-        ListNode l3 = new ListNode(4);
-        l1.next = l2;
-        l2.next = l3;
-        ListNode l4 = new ListNode(1);
-        ListNode l5 = new ListNode(3);
-        ListNode l6 = new ListNode(4);
-        l4.next = l5;
-        l5.next = l6;
-
-        ListNode listNode = mergeTwoLists(l1, l4);
-        printListNode(listNode);
+    @Test
+    void solution() {
+        ListNode listNode1 = new ListNode(new int[]{1, 2, 4});
+        ListNode listNode2 = new ListNode(new int[]{1, 3, 4});
+        assertEquals(mergeTwoLists(listNode1, listNode2).toString(), "1,1,2,3,4,4");
     }
 
-    private static void printListNode(ListNode listNode) {
-        while (listNode != null) {
-            System.out.print(listNode.val + ", ");
-            listNode = listNode.next;
-        }
-        System.out.println();
-    }
-
-    /**
-     * 合并链表
-     *
-     * @param listNode1 链表1
-     * @param listNode2 链表2
-     * @return 合并后的链表
-     */
-    public static ListNode mergeTwoLists(ListNode listNode1, ListNode listNode2) {
+    public ListNode mergeTwoLists(ListNode listNode1, ListNode listNode2) {
         // 最简单的情况：两个链表中有一个是null，则合并之后的链表就是另外一个链表；
         if (listNode1 == null) {
             return listNode2;

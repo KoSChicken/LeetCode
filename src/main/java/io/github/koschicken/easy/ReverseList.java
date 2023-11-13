@@ -1,30 +1,23 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.ListNode;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * <a href="https://leetcode.cn/problems/reverse-linked-list/description/">206. 反转链表</a>
  */
 public class ReverseList {
 
-    public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        ListNode n1 = new ListNode(2);
-        ListNode n2 = new ListNode(3);
-        ListNode n3 = new ListNode(4);
-        ListNode n4 = new ListNode(5);
-        head.next = n1;
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        ListNode listNode = reverseListRecur(head);
-        ListNode.printNode(listNode);
-        System.out.println("-");
-        ListNode listNode2 = reverseList(listNode);
-        ListNode.printNode(listNode2);
+    @Test
+    void solution() {
+        ListNode reversed = reverseListRecur(new ListNode(new int[]{1, 2, 3, 4, 5}));
+        assertEquals(reversed.toString(), "5,4,3,2,1");
+        assertEquals(reverseList(reversed).toString(), "1,2,3,4,5");
     }
 
-    private static ListNode reverseListRecur(ListNode head) {
+    public ListNode reverseListRecur(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
@@ -34,7 +27,7 @@ public class ReverseList {
         return listNode;
     }
 
-    private static ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
