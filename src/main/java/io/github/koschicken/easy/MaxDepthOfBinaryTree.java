@@ -1,22 +1,27 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
+import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * <a href="https://leetcode.cn/problems/maximum-depth-of-binary-tree">104. 二叉树的最大深度</a>
  */
 public class MaxDepthOfBinaryTree {
 
-    public static void main(String[] args) {
-        TreeNode tree = buildTree();
-        System.out.println(maxDepth(tree));
-        System.out.println(maxDepthRecur(tree));
+
+    @Test
+    void solution() {
+        TreeNode tree = new TreeNode(new Integer[]{3, 9, 20, null, null, 15, 7});
+        assertEquals(maxDepth(tree), 3);
+        assertEquals(maxDepthRecur(tree), 3);
     }
 
-    public static int maxDepthRecur(TreeNode root) {
+    public int maxDepthRecur(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -25,7 +30,7 @@ public class MaxDepthOfBinaryTree {
         return Math.max(leftDepth, rightDepth) + 1;
     }
 
-    public static int maxDepth(TreeNode root) {
+    public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -49,20 +54,4 @@ public class MaxDepthOfBinaryTree {
         return depth;
     }
 
-    private static TreeNode buildTree() {
-        TreeNode root = new TreeNode(3);
-        TreeNode node1 = new TreeNode(9);
-        TreeNode node2 = new TreeNode(20);
-        TreeNode node3 = new TreeNode(15);
-        TreeNode node4 = new TreeNode(7);
-        TreeNode node5 = new TreeNode(14);
-        TreeNode node6 = new TreeNode(6);
-        root.left = node1;
-        root.right = node2;
-        node1.left = node5;
-        node1.right = node6;
-        node2.left = node3;
-        node2.right = node4;
-        return root;
-    }
 }

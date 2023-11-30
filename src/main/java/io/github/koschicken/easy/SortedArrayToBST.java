@@ -1,9 +1,11 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 /**
  * <a href="https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/">108. 将有序数组转换为二叉搜索树</a>
@@ -14,18 +16,22 @@ import java.util.List;
  */
 public class SortedArrayToBST {
 
-    public static void main(String[] args) {
+    @Test
+    void solution() {
         int[] nums = {0, 1, 2, 3, 4, 5};
         TreeNode treeNode = sortedArrayToBST(nums);
-        List<Integer> list = BSTTraversal.postOrderTraversalNoRecursive(treeNode);
-        System.out.println(Arrays.toString(list.toArray(new Integer[0])));
+        BSTTraversal bstTraversal = new BSTTraversal();
+        // 中序遍历有序
+        assertIterableEquals(bstTraversal.inOrderTraversalNoRecursive(treeNode), Arrays.asList(0, 1, 2, 3, 4, 5));
+        // 后序遍历 1, 0, 3, 5, 4, 2
+        assertIterableEquals(bstTraversal.postOrderTraversalNoRecursive(treeNode), Arrays.asList(1, 0, 3, 5, 4, 2));
     }
 
-    public static TreeNode sortedArrayToBST(int[] nums) {
+    public TreeNode sortedArrayToBST(int[] nums) {
         return sortedArrayToBST(nums, 0, nums.length - 1);
     }
 
-    private static TreeNode sortedArrayToBST(int[] nums, int start, int end) {
+    private TreeNode sortedArrayToBST(int[] nums, int start, int end) {
         if (start > end) {
             return null;
         }

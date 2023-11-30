@@ -1,30 +1,24 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * <a href="https://leetcode.cn/problems/balanced-binary-tree/description/">110. 平衡二叉树</a>
  */
 public class IsBalancedTree {
 
-    public static void main(String[] args) {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(2);
-        TreeNode t4 = new TreeNode(3);
-        TreeNode t5 = new TreeNode(3);
-        TreeNode t6 = new TreeNode(4);
-        TreeNode t7 = new TreeNode(4);
-        t1.left = t2;
-        t1.right = t3;
-        t2.left = t4;
-        t3.left = t5;
-        t4.left = t6;
-        t5.left = t7;
-        System.out.println(isBalanced(t1));
+    @Test
+    void solution() {
+        assertTrue(isBalanced(new TreeNode(new Integer[]{3, 9, 20, null, null, 15, 7})));
+        assertFalse(isBalanced(new TreeNode(new Integer[]{1, 2, 2, 3, 3, null, null, 4, 4})));
+        assertFalse(isBalanced(new TreeNode(new Integer[]{1, 2, 2, 3, null, null, 3, 4, null, null, 4})));
     }
 
-    public static boolean isBalanced(TreeNode root) {
+    public boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
         }
@@ -36,7 +30,7 @@ public class IsBalancedTree {
         return isBalanced(root.left) && isBalanced(root.right);
     }
 
-    private static int maxDepthRecur(TreeNode root) {
+    private int maxDepthRecur(TreeNode root) {
         if (root == null) {
             return 0;
         }

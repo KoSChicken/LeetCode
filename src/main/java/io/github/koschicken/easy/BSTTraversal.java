@@ -1,8 +1,11 @@
 package io.github.koschicken.easy;
 
 import io.github.koschicken.common.TreeNode;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 /**
  * 遍历二叉树
@@ -21,37 +24,24 @@ import java.util.*;
  */
 public class BSTTraversal {
 
-    public static void main(String[] args) {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(3);
-        TreeNode t4 = new TreeNode(4);
-        TreeNode t5 = new TreeNode(5);
-        TreeNode t6 = new TreeNode(6);
-        TreeNode t7 = new TreeNode(7);
-        TreeNode t8 = new TreeNode(8);
-        t1.left = t2;
-        t1.right = t3;
-        t2.left = t4;
-        t3.right = t5;
-        t4.right = t6;
-        t6.left = t7;
-        t6.right = t8;
+    @Test
+    void solution() {
+        TreeNode treeNode = new TreeNode(new Integer[]{1, 2, 3, 4, null, null, 5, null, 6, null, null, 7, 8});
         // 前序
-        printList(preOrderTraversalNoRecursive(t1));
-        printList(preOrderTraversal(t1));
+        assertIterableEquals(preOrderTraversalNoRecursive(treeNode), Arrays.asList(1, 2, 4, 6, 7, 8, 3, 5));
+        assertIterableEquals(preOrderTraversal(treeNode), Arrays.asList(1, 2, 4, 6, 7, 8, 3, 5));
         // 中序
-        printList(inOrderTraversalNoRecursive(t1));
-        printList(inOrderTraversal(t1));
+        assertIterableEquals(inOrderTraversalNoRecursive(treeNode), Arrays.asList(4, 7, 6, 8, 2, 1, 3, 5));
+        assertIterableEquals(inOrderTraversal(treeNode), Arrays.asList(4, 7, 6, 8, 2, 1, 3, 5));
         // 后序
-        printList(postOrderTraversalNoRecursive(t1));
-        printList(postOrderTraversal(t1));
+        assertIterableEquals(postOrderTraversalNoRecursive(treeNode), Arrays.asList(7, 8, 6, 4, 2, 5, 3, 1));
+        assertIterableEquals(postOrderTraversal(treeNode), Arrays.asList(7, 8, 6, 4, 2, 5, 3, 1));
     }
 
     /**
      * 中序
      */
-    public static List<Integer> inOrderTraversalNoRecursive(TreeNode root) {
+    public List<Integer> inOrderTraversalNoRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
         while (root != null || !deque.isEmpty()) {
@@ -68,13 +58,13 @@ public class BSTTraversal {
         return list;
     }
 
-    private static List<Integer> inOrderTraversal(TreeNode root) {
+    private List<Integer> inOrderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         inOrderTraversal(root, list);
         return list;
     }
 
-    private static void inOrderTraversal(TreeNode treeNode, List<Integer> list) {
+    private void inOrderTraversal(TreeNode treeNode, List<Integer> list) {
         if (treeNode != null) {
             inOrderTraversal(treeNode.left, list);
             list.add(treeNode.val);
@@ -85,7 +75,7 @@ public class BSTTraversal {
     /**
      * 前序
      */
-    public static List<Integer> preOrderTraversalNoRecursive(TreeNode root) {
+    public List<Integer> preOrderTraversalNoRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
         while (root != null || !deque.isEmpty()) {
@@ -102,13 +92,13 @@ public class BSTTraversal {
         return list;
     }
 
-    private static List<Integer> preOrderTraversal(TreeNode root) {
+    private List<Integer> preOrderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
         preOrderTraversal(root, list);
         return list;
     }
 
-    private static void preOrderTraversal(TreeNode treeNode, List<Integer> list) {
+    private void preOrderTraversal(TreeNode treeNode, List<Integer> list) {
         if (treeNode != null) {
             list.add(treeNode.val);
             preOrderTraversal(treeNode.left, list);
@@ -119,7 +109,7 @@ public class BSTTraversal {
     /**
      * 后序
      */
-    public static List<Integer> postOrderTraversalNoRecursive(TreeNode root) {
+    public List<Integer> postOrderTraversalNoRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
         TreeNode lastVisit = root;
@@ -141,21 +131,17 @@ public class BSTTraversal {
         return list;
     }
 
-    private static List<Integer> postOrderTraversal(TreeNode root) {
+    private List<Integer> postOrderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
         postOrderTraversal(root, list);
         return list;
     }
 
-    private static void postOrderTraversal(TreeNode treeNode, List<Integer> list) {
+    private void postOrderTraversal(TreeNode treeNode, List<Integer> list) {
         if (treeNode != null) {
             postOrderTraversal(treeNode.left, list);
             postOrderTraversal(treeNode.right, list);
             list.add(treeNode.val);
         }
-    }
-
-    private static void printList(List<Integer> list) {
-        System.out.println(Arrays.toString(list.toArray(new Integer[0])));
     }
 }
